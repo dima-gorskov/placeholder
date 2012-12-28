@@ -9,6 +9,7 @@ placeholder cross-browser
 &lt;script src="/placeholder/placeholder.min.js"&gt;&lt;/script&gt;
 </pre>
 ##simple:
+placeholder text to specify the attribute 'data-label'
 <pre>
 $(form).Placeholder();
 </pre>
