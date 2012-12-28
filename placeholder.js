@@ -1,7 +1,21 @@
 (function($){
-	jQuery.fn.Placeholder = function(){
-		var inputs = $(this).find(":text,[type=email],:password,textarea");
-		$("title").after("<style type='text/css'>.placeholderWrapper{position:relative;}.placeholderWrapper>label{cursor: text;padding-left:3px;padding-top:1px;position:absolute;text-transform:uppercase;z-index:3;}</style>");
+	jQuery.fn.Placeholder = function(options){
+		options = $.extend({
+			selectors: ":text,[type=email],:password,textarea",
+			style: {
+				cursor: 'text',
+				other: ''
+			}
+		}, options);
+		var inputs = $(this).find(options.selectors);
+		$("title").after("<style type='text/css'>.placeholderWrapper{position:relative;}.placeholderWrapper>label{ \
+		cursor: "+options.style.cursor+";\
+		padding-left:3px;\
+		padding-top:1px;\
+		position:absolute;\
+		text-transform:uppercase;\
+		z-index:3;"+options.style.other+"\
+		}</style>");
 		inputs.each(function(){
 			if($(this).data('label')){
 				var labelName = $(this).data('label');
