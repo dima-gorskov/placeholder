@@ -6,7 +6,10 @@
     <script type="text/javascript" src="placeholder.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#test').Placeholder();
+            $('#test').Placeholder({
+				styleLabel: 	'color: #00ffff;font-weight:bold; width:100%;',
+				styleWrap: 'padding:20px; background:yellow;width:250px'
+			});
         });
     </script>
 </head>

@@ -2,19 +2,18 @@
 	jQuery.fn.Placeholder = function(options){
 		options = $.extend({
 			selectors: ":text,[type=email],:password,textarea",
-			style: {
-				cursor: 'text',
-				other: ''
-			}
+			styleLabel: '',
+			styleWrap: 'position:relative;',
+			styleInput: ''
 		}, options);
 		var inputs = $(this).find(options.selectors);
-		$("title").after("<style type='text/css'>.placeholderWrapper{position:relative;}.placeholderWrapper>label{ \
-		cursor: "+options.style.cursor+";\
+		$("title").after("<style type='text/css'>.placeholderWrapper{"+options.styleWrap+"}.placeholderWrapper>input{"+options.styleInput+"}.placeholderWrapper>textarea{"+options.styleInput+"}.placeholderWrapper>label{ \
+		cursor: text;\
 		padding-left:3px;\
 		padding-top:1px;\
 		position:absolute;\
 		text-transform:uppercase;\
-		z-index:3;"+options.style.other+"\
+		z-index:3;"+options.styleLabel+"\
 		}</style>");
 		inputs.each(function(){
 			if($(this).data('label')){
