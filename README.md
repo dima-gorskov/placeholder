@@ -18,6 +18,6 @@ $(form).Placeholder({
 style for input, label, input-wrapper:
 $(form).Placeholder({
     styleLabel: 'color: #fff;', // style for label
-  	styleWrap: 'padding:20px 20px 5px; background:yellow;width:250px', // style for wrapper
-		styleInput: 'width:100%; background:#000; color:#fff' // style for inputs and textarea
+    styleWrap: 'padding:20px 20px 5px; background:yellow;width:250px', // style for wrapper
+    styleInput: 'width:100%; background:#000; color:#fff' // style for inputs and textarea
 });
