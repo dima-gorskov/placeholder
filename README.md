@@ -1,9 +1,9 @@
-placeholder
+##placeholder
 ===========
 
 placeholder cross-browser
 
-connect plugin:
+##connect plugin:
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="/placeholder/placeholder.min.js"></script>
 
