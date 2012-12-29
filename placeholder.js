@@ -16,6 +16,9 @@
 		z-index:3;"+options.styleLabel+"\
 		}</style>");
 		inputs.each(function(){
+			if($(this).attr('placeholder')){
+				$(this).removeAttr('placeholder');
+			}
 			if($(this).data('label')){
 				var labelName = $(this).data('label');
 			} else {
